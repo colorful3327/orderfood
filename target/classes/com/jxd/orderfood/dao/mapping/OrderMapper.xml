@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxd.orderfood.dao.OrderMapper">
+    <select id="selectAllOrderList" resultType="java.util.HashMap">
+        select o.orderno , d.dname , o.ordertime , group_concat(e.ename) enames,
+               o.orderfoodtype , o.foodamount , o.totalmoney , o.status , s.sname , o.note , o.reasonrejection
+        from `order` o
+        join order_emp oe on o.orderno = oe.orderno
+        join emp e on oe.empno = e.empno
+        join dept d on e.deptno = d.deptno
+        join statusname s on o.status = s.status
+        where 1 = 1
+            <if test="queryMap.uname != null and queryMap.uname != ''">
+                and o.empno = (select empno from emp where ename = #{queryMap.uname})
+            </if>
+            <if test="queryMap.datestart != null and queryMap.datestart != ''">
+                and ordertime between #{queryMap.datestart} and #{queryMap.dateend}
+            </if>
+            <if test="queryMap.orderfoodtype != null and queryMap.orderfoodtype != ''">
+                and orderfoodtype = #{queryMap.orderfoodtype}
+            </if>
+            <if test="queryMap.status != null and queryMap.status != ''">
+                and o.status = #{queryMap.status}
+            </if>
+
+        <choose>
+            <when test="queryMap.deptno != null and queryMap.deptno != ''">
+                and e.deptno = #{queryMap.deptno}
+            </when>
+            <otherwise>
+                and e.deptno != 4
+            </otherwise>
+        </choose>
+        group by orderno
+        order by o.ordertime desc
+    </select>
+
+    <insert id="insertOrder" useGeneratedKeys="true" keyProperty="orderno" keyColumn="orderno">
+        insert into `order`(ordertime, empno, orderfoodtype, foodamount, totalmoney, status, note)
+        values (#{infoMap.ordertime}, #{infoMap.empno}, #{infoMap.orderfoodtype}, #{infoMap.foodamount}, #{infoMap.totalmoney}, #{infoMap.status}, #{infoMap.note})
+    </insert>
+
+    <update id="updateOrder">
+        update `order`
+        set ordertime = #{infoMap.ordertime}, empno = #{infoMap.empno},
+            orderfoodtype = #{infoMap.orderfoodtype}, foodamount = #{infoMap.foodamount},
+            totalmoney = #{infoMap.totalmoney}, status = #{infoMap.status}, note = #{infoMap.note}
+        where orderno = #{infoMap.orderno}
+    </update>
+
+    <delete id="deleteOrderByNos">
+        delete from `order` where orderno in (
+            <foreach collection="ordernos" item="orderno" separator=",">
+                #{orderno}
+            </foreach>
+            )
+    </delete>
+
+    <select id="selectOrderListForManage" resultType="java.util.HashMap">
+        select o.orderno , d.dname , o.ordertime , group_concat(e.ename) enames,
+               o.orderfoodtype , o.foodamount , o.totalmoney , o.status , s.sname , o.note , o.reasonrejection
+        from `order` o
+            join order_emp oe on o.orderno = oe.orderno
+            join emp e on oe.empno = e.empno
+            join dept d on e.deptno = d.deptno
+            join statusname s on o.status = s.status
+        where o.status = #{queryMap.status}
+            <if test="queryMap.deptno != null and queryMap.deptno != ''">
+                and e.deptno = #{queryMap.deptno}
+            </if>
+            <if test="queryMap.orderfoodtype != null and queryMap.orderfoodtype != ''">
+                and o.orderfoodtype = #{queryMap.orderfoodtype}
+            </if>
+            and ordertime between #{queryMap.datestart} and #{queryMap.dateend}
+        group by orderno
+    </select>
+
+    <update id="updateOrderByManager">
+        <foreach collection="list" item="orderno" separator=";">
+            update `order` set status = #{updInfo.status}, reasonrejection = #{updInfo.reasonrejection}
+            where orderno = #{orderno}
+        </foreach>
+    </update>
+    <!--UPDATE `order`
+    SET
+    status = CASE orderno
+    <foreach collection="list" item="orderno" separator=";">
+        WHEN orderno THEN #{updInfo.status}
+    </foreach>
+    end,
+    reasonrejection = CASE orderno
+    <foreach collection="list" item="orderno" separator=";">
+        WHEN orderno THEN #{updInfo.reasonrejection}
+    </foreach>
+    end
+    WHERE orderno IN (
+    <foreach collection="list" item="orderno" separator=";">
+        #{orderno}
+    </foreach>
+    )-->
+
+    <!--<resultMap id="resMap" type="java.util.HashMap">
+        <result column="foodno" property="o.foodno" jdbcType="VARCHAR" />
+        <result column="fname" property="f.fname" jdbcType="VARCHAR" />
+        <result column="total" property="total" jdbcType="VARCHAR"/>
+        <result column="price" property="f.price" jdbcType="VARCHAR"/>
+        <result column="totalprice" property="totalprice" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="selectStatisticFoodInfo" resultMap="resMap">
+        SELECT o.foodno, f.fname, count(foodamount) AS total, f.price, count(foodamount) * f.price as totalprice
+        FROM orderfoodinfo o
+        join food f on o.foodno = f.foodno
+        where orderno in (
+        select orderno from `order` o2
+        join emp e on o2.empno = e.empno
+        join dept d on e.deptno = d.deptno
+        where o2.ordertime between #{queryMap.datestart} and #{queryMap.dateend}
+        and o2.orderfoodtype = #{queryMap.orderfoodtype}
+        and o2.status = #{queryMap.status}
+        <if test="queryMap.deptno != null and queryMap.deptno != ''">
+            and d.deptno = #{queryMap.deptno}
+        </if>
+        )
+        GROUP BY foodno
+    </select>-->
+    <select id="selectStatisticFoodInfo" resultType="java.util.HashMap">
+        SELECT o.foodno, f.fname, count(foodamount) AS total, f.price, count(foodamount) * f.price as totalprice
+        FROM orderfoodinfo o
+             join food f on o.foodno = f.foodno
+        where orderno in (
+            select orderno from `order` o2
+                join emp e on o2.empno = e.empno
+                join dept d on e.deptno = d.deptno
+            where o2.ordertime between #{queryMap.datestart} and #{queryMap.dateend}
+                <if test="queryMap.orderfoodtype != null and queryMap.orderfoodtype != ''">
+                    and o2.orderfoodtype = #{queryMap.orderfoodtype}
+                </if>
+                and o2.status in (
+                <foreach collection="statusList" item="status" separator=",">
+                    #{status}
+                </foreach>
+                )
+                <if test="queryMap.deptno != null and queryMap.deptno != ''">
+                    and d.deptno = #{queryMap.deptno}
+                </if>
+        )
+        GROUP BY foodno
+    </select>
+    <!--and o2.status in (
+    <foreach collection="statusList" item="status" separator=",">
+        #{status}
+    </foreach>
+    )-->
+
+    <select id="selectCountByStatus" resultType="int">
+        select count(*) from (
+            select orderno from `order` o
+                join emp e on o.empno = e.empno
+                join dept d on e.deptno = d.deptno
+            where o.ordertime between #{queryMap.datestart} and #{queryMap.dateend}
+                <if test="queryMap.orderfoodtype != null and queryMap.orderfoodtype != ''">
+                    and o.orderfoodtype = #{queryMap.orderfoodtype}
+                </if>
+                and o.status in (
+                <foreach collection="statusList" item="status" separator=",">
+                    #{status}
+                </foreach>
+                )
+                <if test="queryMap.deptno != null and queryMap.deptno != ''">
+                and d.deptno = #{queryMap.deptno}
+                </if>
+        ) as res
+    </select>
+    <!--<foreach collection="statusList" item="status" separator=",">
+        #{status}
+    </foreach>
+    )-->
+
+    <select id="selectOrderFood" resultType="java.util.HashMap">
+        select o.ordertime, e.ename ,f.fname , o2.foodamount from `order` o
+            left join emp e on o.empno = e.empno
+            left join orderfoodinfo o2 on o.orderno = o2.orderno
+            left join food f on o2.foodno = f.foodno
+        where o.orderno = #{orderno}
+        group by o2.foodno
+    </select>
+</mapper>

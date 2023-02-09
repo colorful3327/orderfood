@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxd.orderfood.dao.DeptMapper">
+    <select id="selectDeptList" resultType="dept">
+        select deptno, dname from dept
+        where deptno not in (4)
+    </select>
+
+    <select id="selectDeptAndTotalEmpList" resultType="java.util.HashMap">
+        select d.deptno, dname, count(e.empno) totalemp
+        from dept d
+        left join emp e
+        on d.deptno = e.deptno
+        where d.deptno not in (4)
+        <if test="queryMap.dname != '' and queryMap.dname != null">
+            and dname like '%' #{queryMap.dname} '%'
+        </if>
+        group by d.deptno
+    </select>
+
+    <insert id="insertDept">
+        insert into dept (dname) values #{deptForm.dname}
+    </insert>
+
+    <update id="updateDept">
+        update dept
+        set dname = #{deptForm.dname}
+        where deptno = #{deptForm.deptno}
+    </update>
+
+    <delete id="deleteDepts">
+        delete from dept where deptno in (
+        <foreach collection="deptnos" item="deptno" separator=",">
+            #{deptno}
+        </foreach>
+        )
+    </delete>
+
+    <select id="selectDeptnoByDname" resultType="string">
+        select deptno from dept where dname = #{dname}
+    </select>
+</mapper>
