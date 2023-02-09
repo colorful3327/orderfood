@@ -4,131 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68f59225-1a17-4a2f-bc99-d511274f1d86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/OrderFoodApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/config/CrosConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/config/FilePathConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/controller/DeptController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/controller/EmpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/controller/FoodController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/controller/StatusNameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/AdminMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/DeptMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/EmpMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/FoodMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/OrderAndEmpMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/OrderFoodInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/StatusNameMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/mapping/AdminMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/mapping/DeptMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/mapping/EmpMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/mapping/FoodMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/mapping/OrderAndEmpMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/mapping/OrderFoodInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/mapping/OrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/mapping/StatusNameMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/dao/mapping/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/model/Dept.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/model/Emp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/model/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/model/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/model/OrderAndEmp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/model/OrderFoodInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/model/StatusName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/IAdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/IDeptService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/IEmpService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/IFoodService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/IOrderAndEmpService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/IOrderFoodInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/IOrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/IStatusNameService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/impl/DeptServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/impl/EmpServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/impl/FoodServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/impl/OrderAndEmpServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/impl/OrderFoodInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/impl/StatusNameServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxd/orderfood/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/OrderFoodApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/config/CrosConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/config/FilePathConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/config/MybatisPlusConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/controller/AdminController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/controller/DeptController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/controller/EmpController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/controller/FoodController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/controller/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/controller/StatusNameController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/AdminMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/DeptMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/EmpMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/FoodMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/OrderAndEmpMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/OrderFoodInfoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/OrderMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/StatusNameMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/mapping/AdminMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/mapping/DeptMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/mapping/EmpMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/mapping/FoodMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/mapping/OrderAndEmpMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/mapping/OrderFoodInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/mapping/OrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/mapping/StatusNameMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/dao/mapping/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/model/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/model/Dept.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/model/Emp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/model/Food.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/model/Order.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/model/OrderAndEmp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/model/OrderFoodInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/model/StatusName.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/IAdminService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/IDeptService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/IEmpService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/IFoodService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/IOrderAndEmpService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/IOrderFoodInfoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/IOrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/IStatusNameService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/IUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/impl/AdminServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/impl/DeptServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/impl/EmpServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/impl/FoodServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/impl/OrderAndEmpServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/impl/OrderFoodInfoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/impl/OrderServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/impl/StatusNameServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jxd/orderfood/service/impl/UserServiceImpl.class" afterDir="false" />
+    <list default="true" id="68f59225-1a17-4a2f-bc99-d511274f1d86" name="Changes" comment="&quot;test IDEA&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,23 +45,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/# 个人文件/# 暂时/RuoYi-Vue-master/RuoYi-Vue-master",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "spring.configuration.checksum": "31b3679f725ee34c28223322d031a134"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JXDlearn/RuoYi-Vue-master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;31b3679f725ee34c28223322d031a134&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JXDlearn\final\orderfood\src\main\resources" />
@@ -243,8 +120,18 @@
       <workItem from="1675730571160" duration="19030000" />
       <workItem from="1675773615060" duration="5071000" />
       <workItem from="1675815508486" duration="7562000" />
-      <workItem from="1675902681931" duration="6677000" />
+      <workItem from="1675902681931" duration="12102000" />
+      <workItem from="1675932682606" duration="990000" />
+      <workItem from="1675934259409" duration="1385000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;test IDEA&quot;">
+      <created>1675926842646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675926842646</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +147,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;test IDEA&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;test IDEA&quot;" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
